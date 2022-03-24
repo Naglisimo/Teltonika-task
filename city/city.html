@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <section class="topLane">
+        <div class="wrapper">
+            <a href="../index.html"><img src="../icons/logo.svg" alt="Icon"/></a>
+        </div>
+    </section>
+
+    <section class='wrapper'>
+
+        <div class="inline-flex">
+            <h1>MIESTAI</h1>
+            <button id="add1"><img src='../icons/add.svg' alt='add'/></button>
+        </div>
+        
+        <div class="inline-flex wrapper">
+            <i src="../icons/search.svg"></i>
+            <input type="text" id="searchInput"/>
+            <input type="date" id="dataInput"/>
+        </div>
+
+
+            <div class="table-container">
+                <table id="table"></table>
+            </div>
+
+
+    </section>
+
+        <!-- ADD CITY MODAL -->
+
+        <div id="addCityModal" class="addCityModal">
+            <div class="modalContent">
+                <button id="closeModal2"><img src="../icons/exit.svg" alt="Icon"/></button>
+                <h2>PRIDĖTI MIESTĄ</h2>
+                <form>
+                    <label for="pavadinimas">Pavadinimas</label>
+                    <input type='text' id="pavadinimas" name="pavadinimas" />
+                    <label for="plotas" >Užimamas plotas</label>
+                    <input type='number' id="plotas" name="plotas" />
+                    <label for="gyventojai" >Gyventojų skaičius</label>
+                    <input type='text' id="gyventojai" name='gyventojai' />
+                    <label for="pastoKodas" >Miesto pašto kodas</label>
+                    <input type='text' id="pastoKodas" name="pastoKodas" />
+                    <button type="submit" id="submit2"><h4>SAUGOTI</h4></button>
+                </form>
+            </div>
+        </div>
+
+        <!--  -->
+
+        <div id="cityMessageModal" class>
+            <div class="messageModalContent"></div>
+        </div>
+
+
+    <script src="./city.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <section class="topLane">
+        <div class="wrapper">
+            <img src="icons/logo.svg" alt="Icon"/>
+        </div>
+    </section>
+ 
+    <section class='wrapper'>
+
+        <div class="inline-flex">
+            <h1>ŠALYS</h1>
+            <button id="add"><img src='icons/add.svg' alt='add'/></button>
+        </div>
+        
+        <div class="inline-flex wrapper">
+            <input type="text" id="searchInput"/>
+            <input type="date" id="dataInput" value="select date"/>
+        </div>
+
+
+            <div class="table-container">
+                <table id="table"></table>
+            </div>
+
+
+    </section>
+
+
+    <!-- ADD COUNTRY MODAL -->
+
+    <div id="addCountryModal" class="addCountryModal">
+        <div class="modalContent">
+            <button id="closeModal1"><img src="icons/exit.svg" alt="Icon"/></button>
+            <h2>PRIDĖTI ŠALĮ</h2>
+            <form onSubmit="">
+                <label for="pavadinimas">Pavadinimas</label>
+                <input type='text' id="pavadinimas" name="pavadinimas" />
+                <label for="plotas" >Užimamas plotas</label>
+                <input type='text' id="plotas" name="plotas" />
+                <label for="gyventojai" >Gyventojų skaičius</label>
+                <input type='text' id="gyventojai" name='gyventojai' />
+                <label for="telKodas" >Šalies Tel. kodas</label>
+                <input type='text' id="telkodas" name="telKodas" />
+                <button type="submit" id="submit1"><h4>SAUGOTI</h4></button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="countryMessageModal"></div>
+
+
+<script src="./index.js" ></script>
+</body>
+</html>

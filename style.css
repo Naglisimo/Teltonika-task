@@ -1,0 +1,324 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #5C5C5C;
+    font-family: oswald;
+}
+
+
+.wrapper {
+    margin: 0 auto;
+    width: 1185px;
+    padding-top: 20px;
+}
+
+.inline-flex {
+    margin: 0;
+    display: inline-flex;
+}
+
+
+
+img {
+    padding-bottom: 8px;
+} 
+
+button {
+    background-image: src('icons/add.svg');
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background-color: transparent;
+}
+
+input {
+    width: 161px;
+    height: 49px;
+    border-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.inline-flex input:first-of-type {
+    width: 100%;
+    margin-right: 24px;
+}
+
+.topLane {
+    height: 71px;
+    background-color: #0054A6;
+}
+
+h1 {
+    font-family: oswald;
+    font-size: 64px;
+    font-weight: 400;
+    color: #5C5C5C;
+
+}
+
+h2 {
+    font-family: oswald;
+    font-size: 38px;
+    font-weight: 400;
+    color: #5C5C5C;
+}
+
+h4 {
+    font-family: oswald;
+    font-size: 21px;
+    font-weight: 400;
+    color: #5C5C5C;
+}
+
+/*  TABLE STYLING  */
+
+.table-container {
+    display: flex;
+    flex-flow: row;
+    width: 1183px;
+    padding: 32px 0;
+}
+
+table {
+    width: 100%;
+    padding-top: 32px;
+    border-radius: 5px;
+    padding: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    font-family: oswald;
+    font-weight: 400;
+    padding-top: 16px;
+    height: 44px;
+    border-left: #969696 solid 1px;
+}
+
+
+tr {
+    width: 100%;
+    border-top: #969696 solid 1px;
+}
+
+ tr th:first-child {
+    border-left: none;
+ 
+}
+
+tr:first-child {
+    border-top: none;
+ 
+}
+
+
+table tr:first-child th {
+    width: 230px;
+}
+
+th:nth-child(-n+4){
+    width: 230px
+}
+
+th:nth-child(n+5){
+    width: 115px
+}
+
+
+.nameRow {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nameRow:first-child {
+    padding-top: 6px;
+}
+
+.nameRow span {
+    position: relative;
+    margin: 0;
+    top: 4px;
+    padding-left: 8px;
+}
+
+span button{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+/*  MODALS */
+
+
+/* ADD COUNTRY MODAL */
+
+.addCountryModal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(254, 254, 254, 0.9); 
+}
+
+.modalContent {
+    Display: flex;
+    flex-direction: column;
+    width: 466px;
+    height: 466px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent button {
+    margin-right: 0;
+}
+
+.modalContent h2 {
+    margin-left: 48px;
+    color: #5C5C5C;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+
+form input {
+    width: 374px;
+    height: 42px;
+    margin-top: 16px;
+}
+
+form button {
+    width: 92px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 24px;
+    margin-right: 48px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+ form label{
+    font-family: oswald;
+    font-weight: 200;
+    color: #5C5C5C;
+    position:relative;
+    top: 25px;
+    margin-left:48px;
+    background-color:white;
+    padding: 0 8px;
+  }
+  
+
+/* ADD CITY MODAL */
+
+
+.addCityModal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(254, 254, 254, 0.9); 
+}
+
+.modalContent {
+    Display: flex;
+    flex-direction: column;
+    width: 466px;
+    height: 466px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent button {
+    margin-right: 0;
+}
+
+.modalContent h2 {
+    margin-left: 48px;
+    color: #5C5C5C;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+
+form input {
+    width: 374px;
+    height: 42px;
+    margin-top: 16px;
+}
+
+form button {
+    width: 92px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 24px;
+    margin-right: 48px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+ form label{
+    font-family: oswald;
+    font-weight: 200;
+    color: #5C5C5C;
+    position:relative;
+    top: 25px;
+    margin-left:48px;
+    background-color:white;
+    padding: 0 8px;
+  }
+
+#cityMessageModal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(254, 254, 254, 0.9); 
+}
+
+.messageModalContent {
+    Display: flex;
+    flex-direction: column;
+    width: 466px;
+    height: 100px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
