@@ -48,6 +48,17 @@ input {
     margin-right: 24px;
 }
 
+.inline-flex label{
+    font-family: oswald;
+    font-weight: 200;
+    color: #5C5C5C;
+    position:relative;
+    top: 25px;
+    margin-left:48px;
+    background-color:white;
+    padding: 0 8px;
+  }
+
 .topLane {
     height: 71px;
     background-color: #0054A6;

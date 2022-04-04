@@ -4,6 +4,9 @@ let currentlyAt = 'display';
 let countryID;
 let fetchedCountries;
 let countries;
+let pages;
+let page = [];
+let currentPage = 1;
 
 // QUERY SELECTORS
 
@@ -47,7 +50,8 @@ const getCountries =  (url, callback) => {
 
 
 const displayCountries = (countriesObject) => {
-    let result = `  <tr class="inline-flex">
+    let result = "";
+    result = `  <tr class="inline-flex">
                     <th class='nameRow'>PAVADINIMAS <span><button id="up"><img src="./icons/up.svg"/></button><button id="down"><img src="./icons/down.svg"/></button></span></th>
                     <th>UŽIMAMAS PLOTAS</th>
                     <th>GYVENTOJŲ SKAIČIUS</th>
@@ -55,10 +59,7 @@ const displayCountries = (countriesObject) => {
                     <th>VEIKSMAI</th>
                     </tr>`;
 
-
-                
-    
-    countriesObject.forEach(country => {
+    countriesObject.map(country => {
 
         result += `<tr class="inline-flex">
                     <th><a href="./city/city.html?${country.id}">${country.name}</a></th>
@@ -69,7 +70,7 @@ const displayCountries = (countriesObject) => {
                     <th><button class="editCountry" key=${country.id} value=${country.id}><img src="icons/pen.svg" alt="icon" /><button></th>
                    </tr>`
     })
-    result += "";
+
 
     table.innerHTML = result;
 
@@ -89,10 +90,25 @@ const displayCountries = (countriesObject) => {
 
     dateInput.addEventListener('change', (e) => handleFilterByDate(e))
 
-
-
-    eventListeners()
 })}
+
+const pagination = (currentPage) => {
+    let url = `https://akademija.teltonika.lt/api4/index.php/countries?page=${currentPage}`
+    if (currentPage != 1)
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        if (data.count) { 
+            page.push(currentPage);
+            console.log(page)
+            currentPage++
+            pagination(currentPage)
+            console.log(currentPage)
+        }
+    })
+    console.log(page)
+    // for (let i = 1; )
+}
 
 // EVENT HANDLING FUNCTIONS
 
@@ -170,11 +186,11 @@ const submitAddForm = (e) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
+                name: addModalInputs.name.value,
                 area: addModalInputs.area.value,
+                population: addModalInputs.population.value,
                 calling_code: addModalInputs.phoneCode.value,
                 created_at: new Date,
-                name: addModalInputs.name.value,
-                population: addModalInputs.population.value
             })
         })
             .then(res => {return res.json()})
@@ -217,4 +233,5 @@ const eventListeners = () => {
 }
 
 
+eventListeners()
 getCountries('https://akademija.teltonika.lt/api4/index.php/countries', () => displayCountries(fetchedCountries));
